@@ -23,7 +23,7 @@ program
 program
     .command('hot')
     .description('show top 10 topics')
-    .alias('ht')
+    .alias('h')
     .action(() => {
         require('../commands/hot.js')();
     });

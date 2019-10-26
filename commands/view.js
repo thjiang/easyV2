@@ -7,8 +7,6 @@ const table = require('../utils/table');
 const loading = ora('loading ...');
 
 module.exports = (post_id) => {
-    console.log(post_id);
-
     loading.start();
 
     axios({
@@ -23,6 +21,7 @@ module.exports = (post_id) => {
             console.log('author: ' + chalk.magenta(res[0].member.username));
             console.log('time: ' + chalk.yellow(dayjs(res[0].created * 1000).format('YYYY/MM/DD HH:mm')));
             console.log('title: ' + chalk.bold.cyan(res[0].title));
+            console.log('url: ' + chalk.underline.blue(res[0].url));
             console.log('content: ' + chalk.white(res[0].content));
 
             process.exit(1);
