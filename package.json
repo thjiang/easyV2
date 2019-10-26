@@ -1,0 +1,40 @@
+{
+  "name": "easyv2",
+  "version": "0.0.1",
+  "description": "Visit v2ex in terminal",
+  "main": "./bin/v2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thjiang/easyV2.git"
+  },
+  "keywords": [
+    "v2ex",
+    "CLI"
+  ],
+  "bin": {
+    "v2": "./bin/v2.js"
+  },
+  "author": "browserify@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thjiang/easyV2/issues"
+  },
+  "homepage": "https://github.com/thjiang/easyV2#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "chalk": "^2.4.2",
+    "cli-table3": "^0.5.1",
+    "commander": "^3.0.2",
+    "inquirer": "^7.0.0",
+    "ora": "^4.0.2",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-alloy": "^3.0.0"
+  }
+}
