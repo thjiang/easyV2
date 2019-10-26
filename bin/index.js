@@ -21,4 +21,12 @@ program
         require('../commands/status.js')();
     });
 
+program
+    .command('hot')
+    .description('show top 10 topics')
+    .alias('ht')
+    .action(() => {
+        require('../commands/hot.js')();
+    });
+
 program.parse(process.argv);
