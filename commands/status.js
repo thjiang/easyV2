@@ -14,7 +14,7 @@ module.exports = () => {
     })
         .then((res) => {
             loading.text = 'Succeed';
-            loading.succeed();
+            loading.clear();
 
             const head = [chalk.bold.cyan('topic_max'), chalk.bold.cyan('member_max')];
             const colWidths = [16, 16];
@@ -24,11 +24,15 @@ module.exports = () => {
             data.push([chalk.yellow(res.topic_max), chalk.yellow(res.member_max)]);
         
             console.log(data.toString());
+
+            process.exit(1);
         })
         .catch((err) => {
             loading.text = 'Error';
             loading.fail();
 
             console.log('ERR:' + err);
+
+            process.exit(1);
         });
 };

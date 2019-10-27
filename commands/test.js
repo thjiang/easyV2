@@ -19,4 +19,6 @@ module.exports = () => {
     console.log(chalk.whiteBright('whiteBright'));
     console.log(chalk.hex('#85a5ff')('#85a5ff'));
     console.log(chalk.hex('#b37feb').bold('#b37feb'));
+
+    process.exit(1);
 };

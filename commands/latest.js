@@ -15,7 +15,7 @@ module.exports = () => {
         method: 'get'
     })
         .then((res) => {
-            loading.succeed();
+            loading.clear();
 
             const head = [
                 chalk.bold.cyan('post_id'),
@@ -37,10 +37,14 @@ module.exports = () => {
             }
 
             console.log(data.toString());
+
+            process.exit(1);
         })
         .catch((err) => {
             loading.fail();
 
             console.log('ERR:' + err);
+
+            process.exit(1);
         });
 };

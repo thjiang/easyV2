@@ -63,11 +63,15 @@ module.exports = (post_id) => {
                     loading.fail();
 
                     console.log('ERR:' + err);
+
+                    process.exit(1);
                 });
         })
         .catch((err) => {
             loading.fail();
 
             console.log('ERR:' + err);
+
+            process.exit(1);
         });
 };
