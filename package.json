@@ -1,6 +1,6 @@
 {
   "name": "easyv2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Visit v2ex in terminal",
   "main": "./bin/v2.js",
   "scripts": {
