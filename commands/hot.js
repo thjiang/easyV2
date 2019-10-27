@@ -7,6 +7,7 @@ const table = require('../utils/table');
 const loading = ora('loading ...');
 
 module.exports = () => {
+    loading.text = 'Succeed';
     loading.start();
 
     axios({

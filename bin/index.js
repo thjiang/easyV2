@@ -37,6 +37,14 @@ program
     });
 
 program
+    .command('test')
+    .description('test')
+    .alias('t')
+    .action(() => {
+        require('../commands/test.js')();
+    });
+
+program
     .command('view')
     .description('view a post')
     .alias('v')

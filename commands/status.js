@@ -13,6 +13,7 @@ module.exports = () => {
         method: 'get'
     })
         .then((res) => {
+            loading.text = 'Succeed';
             loading.succeed();
 
             const head = [chalk.bold.cyan('topic_max'), chalk.bold.cyan('member_max')];
@@ -25,6 +26,7 @@ module.exports = () => {
             console.log(data.toString());
         })
         .catch((err) => {
+            loading.text = 'Error';
             loading.fail();
 
             console.log('ERR:' + err);
