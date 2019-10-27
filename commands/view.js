@@ -2,8 +2,6 @@ const chalk = require('chalk');
 const ora = require('ora');
 const dayjs = require('dayjs');
 const axios = require('../utils/request');
-const table = require('../utils/table');
-
 const loading = ora('loading ...');
 
 module.exports = (post_id) => {
