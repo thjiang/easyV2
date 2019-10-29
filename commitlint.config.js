@@ -18,19 +18,17 @@ module.exports = {
       2,
       'always',
       [
-        '✨ feat',
-        '📦 new',
-        '👌 improve',
-        '🐛 fix',
-        '🚀 release',
-        '🦄 release',
-        '📝 docs',
-        '✅ test',
-        '🔨 refactor',
-        '💩 bad',
-        '🎉 init',
-        '🔥 remove',
-        '🎨 format'
+        ':sparkles: feat',
+        ':package: new',
+        ':bug: fix',
+        ':gem: release',
+        ':memo: docs',
+        ':white_check_mark: test',
+        ':recycle: refactor',
+        ':hankey: bad',
+        ':tada: init',
+        ':fire: remove',
+        ':art: format'
       ]
     ]
   }
