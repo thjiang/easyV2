@@ -6,9 +6,8 @@ Visit v2ex in terminal
 
 ## Preview
 
-![v2hot.jpg](https://i.loli.net/2019/10/27/qBlm9zsxo2bLMQr.jpg)
-
-![v2view.jpg](https://i.loli.net/2019/10/27/mNT2HjMr4d51QVb.jpg)
+![v2hot.png](https://i.loli.net/2019/10/29/JXbBIKHtxyhD76L.png)
+![v2view.png](https://i.loli.net/2019/10/29/p8wcHoOBGjQM9sZ.png)
 
 ## Install
 
