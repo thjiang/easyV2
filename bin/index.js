@@ -65,3 +65,8 @@ program
   });
 
 program.parse(process.argv);
+
+// show help if not any arguments
+if (program.args.length === 0) {
+  program.help();
+}
