@@ -4,6 +4,7 @@
   "description": "Visit v2ex in terminal",
   "main": "./bin/v2.js",
   "scripts": {
+    "format": "prettier --config --write {bin,commands,utils}/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -39,6 +40,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
-    "eslint-config-alloy": "^3.0.0"
+    "eslint-config-alloy": "^3.0.0",
+    "prettier": "^1.18.2"
   }
 }

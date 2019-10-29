@@ -7,44 +7,44 @@ const table = require('../utils/table');
 const loading = ora('loading ...');
 
 module.exports = () => {
-    loading.text = 'Succeed';
-    loading.start();
+  loading.text = 'Succeed';
+  loading.start();
 
-    axios({
-        url: '/api/topics/latest.json',
-        method: 'get'
+  axios({
+    url: '/api/topics/latest.json',
+    method: 'get'
+  })
+    .then((res) => {
+      loading.clear();
+
+      const head = [
+        chalk.bold.cyan('post_id'),
+        chalk.bold.cyan('title'),
+        chalk.bold.cyan('created'),
+        chalk.bold.cyan('replies')
+      ];
+      const colWidths = [10, 40, 18, 9];
+
+      const data = table(head, colWidths);
+
+      for (let i = 0; i < res.length; i++) {
+        data.push([
+          chalk.yellow(res[i].id),
+          chalk.yellow(res[i].title),
+          chalk.yellow(dayjs(res[i].created * 1000).format('YYYY/MM/DD HH:mm')),
+          chalk.yellow(res[i].replies)
+        ]);
+      }
+
+      console.log(data.toString());
+
+      process.exit(1);
     })
-        .then((res) => {
-            loading.clear();
+    .catch((err) => {
+      loading.fail();
 
-            const head = [
-                chalk.bold.cyan('post_id'),
-                chalk.bold.cyan('title'),
-                chalk.bold.cyan('created'),
-                chalk.bold.cyan('replies')
-            ];
-            const colWidths = [10, 40, 18, 9];
+      console.log('ERR:' + err);
 
-            const data = table(head, colWidths);
-
-            for (let i = 0; i < res.length; i++) {
-                data.push([
-                    chalk.yellow(res[i].id),
-                    chalk.yellow(res[i].title),
-                    chalk.yellow(dayjs(res[i].created * 1000).format('YYYY/MM/DD HH:mm')),
-                    chalk.yellow(res[i].replies)
-                ]);
-            }
-
-            console.log(data.toString());
-
-            process.exit(1);
-        })
-        .catch((err) => {
-            loading.fail();
-
-            console.log('ERR:' + err);
-
-            process.exit(1);
-        });
+      process.exit(1);
+    });
 };
